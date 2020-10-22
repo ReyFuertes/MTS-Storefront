@@ -3,14 +3,14 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/orders', pathMatch: 'full' },
+  { path: '', redirectTo: '/order', pathMatch: 'full' },
   {
     path: '',
     canActivate: [],
     children: [
       {
-        path: 'orders',
-        loadChildren: () => import('./modules/orders/orders.module').then(m => m.OrdersModule)
+        path: 'order',
+        loadChildren: () => import('./modules/order/order.module').then(m => m.OrderModule)
       }
     ]
   }

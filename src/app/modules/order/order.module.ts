@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { OrdersContainerComponent } from './container/orders-container.component';
+import { OrderContainerComponent } from './container/order-container.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -9,6 +9,9 @@ import { MatListModule } from '@angular/material/list';
 
 import { ButtonModule } from 'primeng/button';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { OrderTabsComponent } from './components/order-tabs/order-tabs.component';
+import { OrderPageComponent } from './components/order-page/order-page.component';
+import { OrderFilterComponent } from './components/order-filters/order-filters.component';
 
 const materialModules = [
   MatTabsModule,
@@ -20,16 +23,21 @@ const primengModules = [
   InputSwitchModule,
 ];
 
-const routes: Routes = [
-  {
+const routes: Routes = [{
+  path: '',
+  component: OrderContainerComponent,
+  children: [{
     path: '',
-    component: OrdersContainerComponent
-  }
-];
+    component: OrderPageComponent
+  }]
+}];
 
 @NgModule({
   declarations: [
-    OrdersContainerComponent
+    OrderContainerComponent,
+    OrderTabsComponent,
+    OrderPageComponent,
+    OrderFilterComponent
   ],
   imports: [
     ...materialModules,
@@ -40,8 +48,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(routes),
-   ],
+  ],
   exports: [],
   providers: [],
 })
-export class OrdersModule {}
+export class OrderModule { }
