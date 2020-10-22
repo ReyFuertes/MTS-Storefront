@@ -4,11 +4,20 @@ import { OrdersContainerComponent } from './container/orders-container.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatListModule } from '@angular/material/list';
+
+import { ButtonModule } from 'primeng/button';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 const materialModules = [
+  MatTabsModule,
+  MatListModule,
 ];
 
 const primengModules = [
+  ButtonModule,
+  InputSwitchModule,
 ];
 
 const routes: Routes = [
@@ -22,7 +31,7 @@ const routes: Routes = [
   declarations: [
     OrdersContainerComponent
   ],
-  imports: [ 
+  imports: [
     ...materialModules,
     ...primengModules,
     FlexLayoutModule,

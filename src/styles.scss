@@ -10,10 +10,14 @@ body {
   background-color: #f2f5f8;
   overflow: auto;
   color: $color-black-2;
+  font-family: $body-font;
 }
 a,
 a:focus,
 a:hover,
 a:visited {
   text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, span, div, b {
+  font-family: $body-font;
 }
