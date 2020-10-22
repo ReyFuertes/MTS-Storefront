@@ -1,0 +1,12 @@
+@mixin ce-checkbox {
+  white-space: nowrap;
+}
+::ng-deep {
+  .ui-chkbox .ui-chkbox-box .ui-chkbox-icon {
+    font-size: 16px !important;
+  }
+  .ui-chkbox .ui-chkbox-box.ui-state-active {
+    border-color: $color-primary !important;
+    background-color: $color-primary !important;
+  }
+}

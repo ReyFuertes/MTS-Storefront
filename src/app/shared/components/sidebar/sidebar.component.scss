@@ -1,0 +1,45 @@
+@import "src/styleguide/shared";
+.menu-container {
+  width: 100%;
+  >div {
+    width: 100%;
+  }
+}
+.menu-item {
+  height: 70px;
+  border-top: thin $color-gray-2 solid;
+  border-left: thin $color-gray-2 solid;
+  border-right: thin $color-gray-2 solid;
+  border-radius: 0 2px 2px 0;
+  width: 100%;
+  padding: 10px;
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  &:last-child {
+    border-bottom: thin $color-gray-2 solid;
+  }
+  span {
+    font-weight: bold;
+  }
+  &.active {
+    animation: createBox .1s;
+    width: 110%; 
+    border-bottom: thin $color-gray-2 solid;
+    z-index: 9999;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-color: $color-yellow !important;
+  }
+}
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

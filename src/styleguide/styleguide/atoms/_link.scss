@@ -1,0 +1,8 @@
+@mixin ce-link {
+  color: $color-primary;
+  cursor: pointer;
+  font-size: 14px;
+  &:hover {
+    text-decoration: underline;
+  }
+}

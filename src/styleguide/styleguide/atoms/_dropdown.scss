@@ -1,0 +1,28 @@
+::ng-deep {
+  .ui-dropdown {
+    width: 100%;
+    border: thin #e2e2e2 solid !important;
+    min-height: 35px;
+  }
+  .ui-dropdown .ui-dropdown-label {
+    border: none !important;
+    color: $color-black-2 !important;
+  }
+  .ui-dropdown-label-container {
+    width: 100%;
+  }
+  label.ui-dropdown-label.ui-inputtext {
+    border: none !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+  }
+  .ui-dropdown .ui-dropdown-trigger .ui-dropdown-trigger-icon {
+    font-size: 12px !important;
+  }
+  .ui-dropdown:not(.ui-state-disabled):hover {
+    border: thin $color-primary solid !important;
+  }
+}

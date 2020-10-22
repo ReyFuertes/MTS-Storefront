@@ -1,0 +1,11 @@
+p-radiobutton {
+  white-space: nowrap;
+}
+.ui-radiobutton .ui-radiobutton-box.ui-state-active {
+  border-color: $color-primary !important;
+  background-color: $color-white !important;
+  color: $color-white !important;
+}
+.ui-radiobutton .ui-radiobutton-box.ui-state-active .ui-radiobutton-icon {
+  background-color: $color-primary !important;
+}

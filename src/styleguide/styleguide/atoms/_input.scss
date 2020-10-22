@@ -1,0 +1,18 @@
+::ng-deep {
+  .ui-inputtext {
+    border: 1px solid $color-gray-2 !important;
+    opacity: 1 !important;
+    &:hover {
+      border: thin $color-primary solid !important;
+    }
+    &.error-border {
+      border: thin $color-red solid !important;
+    }
+  }
+  .ui-inputtext:enabled:focus:not(.ui-state-error) {
+    box-shadow: 0 0 0 0.5px #8dcdff !important;
+  }
+}
+input:disabled {
+  cursor: not-allowed !important;
+}

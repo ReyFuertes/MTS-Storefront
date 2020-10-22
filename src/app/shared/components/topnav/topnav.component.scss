@@ -1,0 +1,12 @@
+@import "src/styleguide/shared";
+
+.topnav-container {
+  min-height: 100px;
+  background-color: $color-blue;
+  > div {
+    color: $color-white;
+    &:nth-child(2) {
+      font-weight: bold;
+    }
+  }
+}

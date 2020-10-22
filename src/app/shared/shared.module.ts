@@ -5,6 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
+import { TopNavComponent } from './components/topnav/topnav.component';
 
 const materialModules = [
   MatListModule
@@ -15,6 +16,7 @@ const primengModules = [
 
 const sharedComponents = [
   SidebarComponent,
+  TopNavComponent
 ];
 
 

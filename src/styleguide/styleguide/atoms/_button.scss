@@ -1,0 +1,44 @@
+@mixin btn {
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 112px;
+  line-height: 33px;
+  width: 100%;
+  font-size: 14px;
+  white-space: nowrap;
+  height: 44px;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+@mixin ce-btn {
+  &.default {
+    @include btn;
+    color: $color-black-1;
+    background-color: $color-gray-3;
+    border: thin $color-gray-3 solid;
+    &:hover {
+      color: $color-black-1;
+      background-color: $color-gray-3;
+      border: thin $color-gray-3 solid;
+    }
+  }
+  &.primary {
+    @include btn;
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+  &.transparent {
+    @include btn;
+    color: $color-primary;
+    background-color: transparent;
+    border-color: $color-primary;
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+  }
+}

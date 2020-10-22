@@ -1,0 +1,26 @@
+@mixin page-container {
+  margin-top: 45px;
+  padding: 32px;
+  flex-direction: column;
+  box-sizing: border-box;
+  display: none;
+  &.active {
+    display: flex;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+  }
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

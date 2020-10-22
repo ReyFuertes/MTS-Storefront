@@ -1,4 +1,6 @@
 export const environment = {
   production: false,
-  apiUrl: ''
+  apiUrl: '',
+  svgPath: 'assets/svg/',
+  imgPath: 'assets/images/',
 };

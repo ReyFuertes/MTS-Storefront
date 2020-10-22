@@ -1,12 +1,14 @@
-<mat-list>
-  <mat-list-item> ORDERS </mat-list-item>
-  <mat-list-item> CROCKERY PICKUP/RETURN </mat-list-item>
-  <mat-list-item> DELI PRODUCTS </mat-list-item>
-  <mat-list-item> MENU ITEMS </mat-list-item>
-  <mat-list-item> ANALYTICS </mat-list-item>
- </mat-list>
+<div class="menu-container" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="40px">
+  <div class="menu-list" fxLayout="column" fxLayoutAlign="start start">
+    <div (click)="selected = 1" class="menu-item" [ngClass]="{'active': selected === 1}"> <span>ORDERS</span> </div>
+    <div (click)="selected = 2" class="menu-item" [ngClass]="{'active': selected === 2}"> <span>CROCKERY PICKUP/RETURN</span> </div>
+    <div (click)="selected = 3" class="menu-item" [ngClass]="{'active': selected === 3}"> <span>DELI PRODUCTS</span> </div>
+    <div (click)="selected = 4" class="menu-item" [ngClass]="{'active': selected === 4}"> <span>MENU ITEMS</span> </div>
+    <div (click)="selected = 5" class="menu-item" [ngClass]="{'active': selected === 5}"> <span>ANALYTICS</span> </div>
+  </div>
 
- <mat-list>
-  <mat-list-item> DELIVERY </mat-list-item>
-  <mat-list-item> COLLECTION </mat-list-item>
- </mat-list>
+  <div class="menu-list" fxLayout="column" fxLayoutAlign="start start">
+    <div (click)="selected = 6" class="menu-item" [ngClass]="{'active': selected === 6}"> <span>DELIVERY</span> </div>
+    <div (click)="selected = 7" class="menu-item" [ngClass]="{'active': selected === 7}"> <span>COLLECTION</span> </div>
+  </div>
+</div>
