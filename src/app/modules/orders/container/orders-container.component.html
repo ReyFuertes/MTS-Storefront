@@ -1,1 +1,153 @@
-<h1>order container here</h1>
+<div>
+  <div fxLayout="row" style="margin-top: 36px">
+    <section fxFlex="auto">
+      <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="New">
+          <!-- TODO: separate component -->
+          <mat-list>
+            <mat-list-item *ngFor="let item of listItems">
+              <div fxLayout="row" style="width: 100%">
+                <b fxFlex="100">{{item.orderNum}}</b>
+                <span fxFlex="auto">{{item.time}}</span>
+              </div>
+            </mat-list-item>
+          </mat-list>
+        </mat-tab>
+
+        <mat-tab label="In Progress">
+          <mat-list>
+            <mat-list-item *ngFor="let item of listItems">
+              <div fxLayout="row" style="width: 100%">
+                <b fxFlex="100">{{item.orderNum}}</b>
+                <span fxFlex="auto">{{item.time}}</span>
+              </div>
+            </mat-list-item>
+          </mat-list>
+        </mat-tab>
+
+        <mat-tab label="Delivered">
+          <mat-list>
+            <mat-list-item *ngFor="let item of listItems">
+              <div fxLayout="row" style="width: 100%">
+                <b fxFlex="100">{{item.orderNum}}</b>
+                <span fxFlex="auto">{{item.time}}</span>
+              </div>
+            </mat-list-item>
+          </mat-list>
+        </mat-tab>
+      </mat-tab-group>
+    </section>
+
+    <section fxFlex="100">
+      <!-- TODO: separate component -->
+      <div fxLayout="row" class="filter-container" fxLayoutGap="35px">
+        <div class="selection" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+          <h3>TODAY</h3>
+        </div>
+
+        <div class="selection" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+          <h3>THIS WEEK</h3>
+        </div>
+
+        <div class="selection" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+          <h3>ALL ORDERS</h3>
+        </div>
+      </div>
+
+      <!-- TODO: separate component -->
+      <div fxLayout="row" class="order-info-header">
+        <h2 fxFlex="auto"><b>ORDER NUMBER</b></h2>
+        <h2 fxFlex="100">DELIVERY TIME: 13:00 - 13:15</h2>
+        <h2 fxFlex="auto"><b>PRINT ORDER</b></h2>
+      </div>
+
+      <!-- TODO: separate component -->
+      <div fxLayout="row">
+        <div fxFlex="60" class="left-col" style="">
+          <section fxLayout="row" class="category-items">
+            <div fxFlex="70">
+              <h3 class="item-header">Restaurant items:</h3>
+              <section>
+                <h5 class="item-name">Item name</h5>
+                <p>+ Side Dish</p>
+                <p>+ Less salt</p>
+              </section>
+
+              <section>
+                <h5 class="item-name">Item name</h5>
+                <p>+ Side Dish</p>
+                <p>+ Less salt</p>
+              </section>
+            </div>
+            <div fxFlex="30">
+              <h3>HK$ XX</h3>
+              <h3>HK$ XX</h3>
+            </div>
+          </section>
+
+          <section fxLayout="row" class="category-items">
+            <div fxFlex="70">
+              <h3 class="item-header">Deli product items:</h3>
+              <h5>Item name</h5>
+            </div>
+            <div fxFlex="30">
+              <h3>&nbsp;</h3>
+              <h3>HK$ XX</h3>
+            </div>
+          </section>
+
+          <section fxLayout="row" class="category-items">
+            <div fxFlex="70">
+              <h3 class="item-header">Other add-ons and requests:</h3>
+              <p>Contactless delivery</p>
+              <p>Add cutlery</p>
+            </div>
+            <div fxFlex="30">
+              <h3>&nbsp;</h3>
+              <h3>HK$ XX</h3>
+            </div>
+          </section>
+        </div>
+        <div fxFlex="40" class="right-col">
+          <div fxLayout="column" fxFill fxLayoutAlign="space-between">
+            <section class="customer-info">
+              <h3>Customer information</h3>
+              <h4>JOHN DOE</h4>
+              <p>Contact customer</p>
+            </section>
+
+            <section class="deliver-to">
+              <h3>Deliver to:</h3>
+              <h4>Centre Stage Tower 1 <br>(108 Hollywood road, Central)<br>Floor 1, unit C</h4>
+            </section>
+
+            <section class="total">
+              <div fxLayout="row" fxLayoutAlign="space-between start">
+                <h3>TOTAL</h3>
+                <h3>HK$ XXX</h3>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- TODO: separate component -->
+      <div fxLayout="row" class="order-info-footer" fxLayoutAlign="space-between start">
+        <div class="selection" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+          <h3>Processing<br>order</h3>
+          <p-inputSwitch></p-inputSwitch>
+        </div>
+
+        <div class="selection" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+          <h3>Out for<br>delivery</h3>
+          <p-inputSwitch></p-inputSwitch>
+        </div>
+
+        <div class="selection" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+          <h3>Delivered</h3>
+          <p-inputSwitch></p-inputSwitch>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
