@@ -1,0 +1,11 @@
+@import 'src/styleguide/shared';
+.search-container {
+  border: thin $color-gray-2 solid;
+  border-radius: 20px;
+  padding-left: 10px;
+  input {
+    border: none;
+    height: 35px;
+    background-color: transparent;
+  }
+}

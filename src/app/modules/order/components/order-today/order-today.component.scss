@@ -1,0 +1,30 @@
+@import 'src/styleguide/shared';
+.order-today-container {
+  margin-right: 20px;
+  > div {
+    width: 100%;
+    padding: 0 20px 24px;
+    &:nth-child(2) {
+      width: 100%;
+      padding: 0 10px;
+      height: 50px;
+      font-weight: bold;
+      border-top: thin $color-gray-2 solid;
+      border-right: thin $color-gray-2 solid;
+      border-bottom: thin $color-gray-2 solid;
+    }
+    &:nth-child(3) {
+      border-right: thin $color-gray-2 solid;
+      border-bottom: thin $color-gray-2 solid;
+      min-height: 427px;
+      padding: 0;
+    }
+  }
+}
+.content {
+  > div {
+    &:nth-child(2) {
+      border-left: thin $color-gray-2 solid;
+    }
+  }
+}

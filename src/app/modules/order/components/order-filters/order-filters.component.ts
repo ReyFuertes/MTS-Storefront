@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sf-order-filters',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-filters.component.scss']
 })
 export class OrderFilterComponent implements OnInit {
+  @Input() public active: 1 | 2 | 3;
+
   constructor() { }
 
   ngOnInit(): void { }
