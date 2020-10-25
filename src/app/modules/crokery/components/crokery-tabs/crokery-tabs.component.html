@@ -1,0 +1,26 @@
+<mat-tab-group [disablePagination]="true" animationDuration="300ms">
+  <mat-tab label="NEW">
+    <ng-container *ngFor="let _ of [0, 1, 2, 3]; let i = index">
+      <div class="tab-item" [ngClass]="{'active': selectedNew === i}" (click)="selectedNew = i">
+        <div fxFlex="80">ORDER NUMBER</div>
+        <div fxFlex="20">12:42</div>
+      </div>
+    </ng-container>
+  </mat-tab>
+  <mat-tab label="IN PROGRESS">
+    <ng-container *ngFor="let _ of [0, 1, 2, 3]; let x = index">
+      <div class="tab-item" [ngClass]="{'active': selectedInProg === x}" (click)="selectedInProg = x">
+        <div fxFlex="80">ORDER NUMBER</div>
+        <div fxFlex="20">12:42</div>
+      </div>
+    </ng-container>
+  </mat-tab>
+  <mat-tab label="DELIVERED">
+    <ng-container *ngFor="let _ of [0, 1, 2, 3]; let y = index">
+      <div class="tab-item" [ngClass]="{'active': selectedDeli === y}" (click)="selectedDeli = y">
+        <div fxFlex="80">ORDER NUMBER</div>
+        <div fxFlex="20">12:42</div>
+      </div>
+    </ng-container>
+  </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,171 @@
+@import 'src/styleguide/shared';
+
+mat-tab-group {
+  border: 1px solid $border-gray-1;
+}
+
+::ng-deep mat-tab-header {
+  border-bottom: none !important;
+}
+
+::ng-deep .mat-tab-label {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  min-width: 0 !important;
+  background-color: $gray-1 !important;
+  border-bottom: 1px solid $border-gray-1;
+  border-right: 1px solid $border-gray-1;
+  text-transform: uppercase;
+  font-weight: bold !important;
+  &:last-child {
+    border-right: none !important;
+  }
+  .mat-tab-label-content {
+    font-size: 22px !important;
+  }
+}
+::ng-deep .mat-tab-label-active {
+  border-bottom: none !important;
+  background-color: transparent !important;
+  color: $blue-1 !important;
+}
+
+::ng-deep mat-ink-bar {
+  background-color: transparent !important;
+}
+
+mat-list-item {
+  border-left: 10px solid $gray-1;
+  margin-bottom: 16px;
+  b, span {
+    font-size: 22px !important;
+  }
+}
+
+.filter-container {
+  padding: 0 32px 41px 32px;
+  .selection {
+    border: 1px solid $gray-2;
+    border-radius: 31px;
+    padding: 8px 48px !important;
+    height: 69px;
+    h3 {
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+}
+
+.crokery-info-header {
+  padding: 41px 39px;
+  border: 1px solid $border-gray-1;
+  h2 {
+    font-size: 22px;
+    white-space: nowrap;
+    &:first-child {
+      margin-right: 36px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      color: $blue-1;
+    }
+    &:nth-child(3) {
+      font-weight: bold;
+    }
+  }
+}
+
+.left-col {
+  padding: 38px;
+  border-left: 1px solid $border-gray-1;
+  border-right: 1px solid $border-gray-1;
+
+  .category-items {
+    margin-bottom: 35px;
+    h3 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 11px;
+      &.item-header {
+        color: $blue-1;
+        font-weight: bold;
+      }
+    }
+    h5 {
+      font-size: 21px;
+      margin-top: 0;
+      margin-bottom: 6px;
+      &.item-name {
+        color: #000;
+      }
+    }
+    p {
+      font-size: 21px;
+      color: $orange-1;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.right-col {
+  border-right: 1px solid $border-gray-1;
+
+  .customer-info {
+    margin-top: 32px;
+    padding: 0 32px;
+    h3 {
+      margin-top: 0;
+      margin-bottom: 32px;
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    p {
+      font-size: 16px;
+      color: $blue-1;
+    }
+  }
+
+  .deliver-to {
+    padding: 0 32px;
+    h3, h4 {
+      font-size: 22px;
+      font-weight: normal;
+    }
+    h3 {
+      font-weight: bold;
+    }
+  }
+
+  .total {
+    border-top: 1px solid $border-gray-1;
+    padding: 15px 32px 20px 32px;
+    h3 {
+      font-size: 22px;
+      margin: 0;
+      &:first-child {
+        color: $blue-1;
+      }
+      &:last-child {
+        color: $black-1;
+      }
+    }
+  }
+}
+.crokery-info-footer {
+  padding: 41px 32px;
+  border: 1px solid $border-gray-1;
+  .selection {
+    border: 1px solid #B2AFAF;
+    border-radius: 36px;
+    padding: 8px 15px 8px 24px !important;
+    height: 69px;
+    h3 {
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+}

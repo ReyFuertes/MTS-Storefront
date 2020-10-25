@@ -1,14 +1,14 @@
 <div class="menu-container" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="40px">
   <div class="menu-list" fxLayout="column" fxLayoutAlign="start start">
-    <div (click)="selected = 1" class="menu-item" [ngClass]="{'active': selected === 1}"> <span>ORDERS</span> </div>
-    <div (click)="selected = 2" class="menu-item" [ngClass]="{'active': selected === 2}"> <span>CROCKERY PICKUP/RETURN</span> </div>
-    <div (click)="selected = 3" class="menu-item" [ngClass]="{'active': selected === 3}"> <span>DELI PRODUCTS</span> </div>
-    <div (click)="selected = 4" class="menu-item" [ngClass]="{'active': selected === 4}"> <span>MENU ITEMS</span> </div>
-    <div (click)="selected = 5" class="menu-item" [ngClass]="{'active': selected === 5}"> <span>ANALYTICS</span> </div>
+    <div (click)="onRoute(routeModule.ORDERS)" class="menu-item" [ngClass]="{'active': selected === routeModule.ORDERS}"> <span>ORDERS</span> </div>
+    <div (click)="onRoute(routeModule.CROCKERY)" class="menu-item" [ngClass]="{'active': selected === routeModule.CROCKERY}"> <span>CROCKERY PICKUP/RETURN</span> </div>
+    <div (click)="onRoute(routeModule.DELI)" class="menu-item" [ngClass]="{'active': selected === routeModule.DELI}"> <span>DELI PRODUCTS</span> </div>
+    <div (click)="onRoute(routeModule.MENU)" class="menu-item" [ngClass]="{'active': selected === routeModule.MENU}"> <span>MENU ITEMS</span> </div>
+    <div (click)="onRoute(routeModule.ANALYTIC)" class="menu-item" [ngClass]="{'active': selected === routeModule.ANALYTIC}"> <span>ANALYTICS</span> </div>
   </div>
 
   <div class="menu-list" fxLayout="column" fxLayoutAlign="start start">
-    <div (click)="selected = 6" class="menu-item" [ngClass]="{'active': selected === 6}"> <span>DELIVERY</span> </div>
-    <div (click)="selected = 7" class="menu-item" [ngClass]="{'active': selected === 7}"> <span>COLLECTION</span> </div>
+    <div (click)="onRoute(routeModule.DELIVERY)" class="menu-item" [ngClass]="{'active': selected === routeModule.DELIVERY}"> <span>DELIVERY</span> </div>
+    <div (click)="onRoute(routeModule.COLLECTION)" class="menu-item" [ngClass]="{'active': selected === routeModule.COLLECTION}"> <span>COLLECTION</span> </div>
   </div>
 </div>
