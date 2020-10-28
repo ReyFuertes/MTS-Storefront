@@ -14,6 +14,9 @@ import { OrderPageComponent } from './components/order-page/order-page.component
 import { OrderFilterComponent } from './components/order-filters/order-filters.component';
 import { OrderTodayComponent } from './components/order-today/order-today.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { OrderEffect } from './store/order.effect';
 
 const materialModules = [
   MatTabsModule,
@@ -57,6 +60,8 @@ const routes: Routes = [{
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(routes),
+    StoreModule.forFeature('order', {}),
+    EffectsModule.forFeature([OrderEffect])
   ],
   exports: [],
   providers: [],

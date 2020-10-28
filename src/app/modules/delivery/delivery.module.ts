@@ -10,6 +10,9 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { EffectsModule } from '@ngrx/effects';
+import { DeliveryEffect } from './store/delivery.effect';
+import { StoreModule } from '@ngrx/store';
 
 const routes: Routes = [{
   path: '',
@@ -42,6 +45,8 @@ const primengModules = [
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(routes),
+    StoreModule.forFeature('delivery', {}),
+    EffectsModule.forFeature([DeliveryEffect])
   ],
   exports: [],
   providers: [],

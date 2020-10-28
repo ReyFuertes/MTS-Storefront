@@ -13,6 +13,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CrokeryPageComponent } from './components/crokery-page/crokery-page.component';
 import { CrokeryTabsComponent } from './components/crokery-tabs/crokery-tabs.component';
 import { CrokeryFiltersComponent } from './components/crokery-filters/crokery-filters.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { CrokeryEffect } from './store/crokery.effect';
 
 const routes: Routes = [{
   path: '',
@@ -48,6 +51,8 @@ const primengModules = [
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(routes),
+    StoreModule.forFeature('crokery', {}),
+    EffectsModule.forFeature([CrokeryEffect])
    ],
   exports: [],
   providers: [],

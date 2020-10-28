@@ -10,6 +10,9 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { MenuItemEffect } from './store/menu-item.effect';
 
 const routes: Routes = [{
   path: '',
@@ -42,6 +45,8 @@ const primengModules = [
     ReactiveFormsModule,
     CommonModule,
     RouterModule.forChild(routes),
+    StoreModule.forFeature('menuItem', {}),
+    EffectsModule.forFeature([MenuItemEffect])
    ],
   exports: [],
   providers: [],
